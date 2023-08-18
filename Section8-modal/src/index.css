@@ -1,0 +1,26 @@
+.App {
+    height: 400px;
+    width: 200px;
+    background: lightblue;
+    /* position: relative; */
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal > div {
+    width: 60%;
+    background-color: #ffff;
+    padding: 20px;
+    min-height: 200px;
+    border-radius: 5px;
+}
