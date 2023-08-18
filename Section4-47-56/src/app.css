@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    width: 600px;
+    flex-wrap: wrap;
+    margin: 60px auto;
+}
+.case {
+    border: 2px solid black;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.case1 {
+    background-color: yellow;
+}
+.case2 {
+    background-color: red;
+}
