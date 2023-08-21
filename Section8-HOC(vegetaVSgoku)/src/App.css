@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
+  margin: 25px auto;
+  /* border: 1px solid black; */
+  /* min-height: 750px; */
+}
+
+.col {
+  width: 450px;
+  height: 750px;
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+  height: 70%;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 150px;
+  margin: 15px auto;
+}
+th {
+  background-color: rgb(188, 170, 170);
+  width: 100px;
+}
+tr{
+  background-color: rgb(217, 110, 110);
+  font-weight: bold;
+
+}
+.punchBtn {
+  padding: 15px;
+  background-color: rgb(114, 6, 6);
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.mort{
+  color: rgb(78, 5, 5);
+}
+
+.blackBtn {
+  background-color: black;
+}
