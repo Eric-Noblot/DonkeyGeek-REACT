@@ -1,6 +1,8 @@
 
 import './App.css';
 import Formulaire from "./components/Formulaire"
+import IsSomething from "./components/IsSomething"
+
 import { useState } from "react"
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
           {todosMap}
         </ul>
       <Formulaire addTodo={addTodo}/>
+      <hr />
+      <IsSomething />
     </div>
   );
 }
