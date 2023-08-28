@@ -2,6 +2,8 @@
 import './App.css';
 import Formulaire from "./components/Formulaire"
 import IsSomething from "./components/IsSomething"
+import Reducer from "./components/Reducer"
+import Reducer2 from "./components/Reducer2"
 
 import { useState } from "react"
 
@@ -27,13 +29,22 @@ function App() {
 
   return (
     <div style={{width: "400px", margin:"10px auto"}} className="App">
+
       <h1>Todo list</h1>
          <ul>
           {todosMap}
         </ul>
       <Formulaire addTodo={addTodo}/>
       <hr />
+
       <IsSomething />
+      <hr />
+
+      <Reducer />
+      <hr />
+
+      <Reducer2 />
+      
     </div>
   );
 }
