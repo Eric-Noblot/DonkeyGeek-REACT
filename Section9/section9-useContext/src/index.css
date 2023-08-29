@@ -11,9 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.reducer_container {
-  width: 100%;
-  border: 1px solid black;
-  padding: 5px;
-}
