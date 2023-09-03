@@ -1,0 +1,15 @@
+.container {
+  width: 500px;
+  margin: 30px auto;
+}
+
+.box {
+  width: 400px;
+  height: 15px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.bar {
+  height: 100%;
+}
