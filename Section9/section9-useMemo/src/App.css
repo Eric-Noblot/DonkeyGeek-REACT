@@ -1,0 +1,46 @@
+.container {
+    width: 600px;
+    margin: 20px auto;
+}
+
+h1 {
+    margin: 10px auto;
+    text-align: center;
+}
+.btn {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 130px;
+    margin: 20px 0px;
+}
+
+.btnRight{
+    margin-left: 260px;
+}
+
+.btnLeft{
+    background-color: rgb(129, 231, 139);
+    margin-left: 50px;
+}
+
+.userList {
+    list-style-type: none;
+    margin: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 500px;
+}
+
+.stop {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dark {
+    background-color: rgb(61, 56, 56);
+}
