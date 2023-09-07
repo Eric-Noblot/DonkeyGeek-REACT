@@ -1,0 +1,65 @@
+
+.container {
+    // border: 2px solid blue;
+    width: 450px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userCont {
+
+}
+
+ul{
+}
+.imgCont{
+    width: 300px;
+    height: 400px;
+}
+
+.boxPicture{
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.filterPicture{
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0, 0, 0, 0.7));
+    width: 300px;
+    height: 400px;
+    position: absolute;
+}
+
+// .picture{
+//     width: 100%;
+//     height: 100%;
+//     // background-size:cover;
+//     object-fit: cover;
+//     background-image: url("https://via.placeholder.com/600/92c952.jpg");
+// }
+
+.userList {
+    list-style-type: none;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.buttons {
+    padding: 15px;
+    background-color: greenyellow;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-left: 25px;
+    margin-top: 90px;
+}
+
+.textPicture {
+    font-Size: 14px;
+    font-weight: bold;
+    bottom: 0;
+    position: absolute;
+    right: 10%;
+    left: 10%;
+    color: white;
+}
