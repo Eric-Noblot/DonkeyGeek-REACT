@@ -1,0 +1,42 @@
+.app {
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid lightcoral;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  outline: none;
+  color: lightcoral;
+}
+input:focus{
+  box-shadow: 5px 5px 55px lightcoral;
+}
+
+table {
+  width: 90%;
+  margin: 5px auto;
+  padding: 10px;
+  font-size: 20px;
+}
+
+table th {
+  background-color: lightcoral;
+  padding: 10px;
+  color: white;
+
+}
+
+table td {
+  font-size: 18px;
+  padding: 10px;
+}
+table tr:nth-child(odd) {
+  background-color: rgb(154, 139, 146);
+}
+table tr:nth-child(even) {
+  background-color: rgb(197, 184, 209);
+}
