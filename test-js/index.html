@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+        h1 {
+            color: green;
+        }
+
+        .newParaClass {
+            width: 100px;
+            height: 30px;
+            border: 2px solid orange;
+            padding: 5px;
+            text-align: center;
+            margin: 0 auto;
+            background: linear-gradient(52deg, #e66465, #9198e5, green 85%);
+            color: white;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-shadow: black 1px 1px 5px;
+        }
+
+        .ajoutCont{
+            margin-top: 20px;
+            border: 2px solid blue;
+            text-align: center;
+
+        }
+        #paragraphe {
+            border: 2px solid red;
+            height: 100%;
+            width: 500px;
+            margin: 0 auto;
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .fond {
+            width: 170px;
+            height: 400px;
+            background-color: pink;
+            position: absolute;
+            top: 15%;
+            bottom: 33%;
+            left: 54%;
+            border-radius: 10px;
+            display: none;
+        }
+        .display {
+            display: block;
+            /* -webkit-animation: fadeIn 1s; */
+            animation: fadeIn 2s;
+        }
+
+        .textFond {
+            border: 2px solid black;
+            height: 100%;
+            width: 170px;
+            padding: 10px;
+            color: purple;
+            overflow:auto;
+        }
+    </style>
+
+
+
+</head>
+
+<!-- //HTML -->
+
+<body>
+    <!-- <div class="fond"></div> -->
+    <form id="paragraphe">
+        <label for="name">Marque ton nom</label>
+        <input type="submit" id="name" value="SUBMIT"></input>
+    </form>
+
+
+     <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        let form = document.querySelector("form")
+        form.addEventListener("submit", (e)=> {
+            e.preventDefault()
+            fond.remove()
+        })
+
+
+        let test = () => {
+            input.addEventListener("keyup", (event)=> {
+            return event.target.value
+        } )
+        }
+    
+
+
+let fruits = [
+    {
+        race: "fraises",
+        color: "rouge",
+        prix: 25,
+        adjectifs: ["sucre","ete" , "tartes"],
+        phrase: (el) => {
+            return `C'est trop bon les ${el}!`
+        }
+    },
+    {
+        race: "pamplemousses",
+        color: "jaune",
+        prix: 15,
+        adjectifs: ["amer","hiver" , "juicy"],
+        phrase: (el) => {
+            return `C'est trop bon les ${el}!`
+        }
+    },
+    {
+        race: "citrons",
+        color: "vert",
+        prix: 10.55,
+        adjectifs: ["acide","limondade" , "rafraichissant"],
+        phrase: (el) => {
+            return `C'est trop bon les ${el}`
+        }
+    }
+]
+
+let totalAdj =[]
+fruits.map((adj) => {
+    adj.adjectifs.map((a) => {
+        totalAdj.push(a)
+    })
+})
+
+let fond = document.createElement("div")
+fond = document.createElement("div")
+fond.classList.add("fond")
+document.body.appendChild(fond)
+
+fruits.forEach((fruit)=> {
+
+    let para = document.getElementById("paragraphe")
+    let ajoutCont = document.createElement("div")
+
+    ajoutCont.classList.add("ajoutCont")
+    para.appendChild(ajoutCont)
+
+    fruit.adjectifs.forEach((adj)=> {
+        let ajout = document.createElement("div")
+        ajout.classList.add("newParaClass")
+        ajout.innerHTML = adj 
+        
+        ajoutCont.appendChild(ajout)
+
+        ajout.addEventListener("click", (e) => {
+
+                fond.remove()
+                fond = document.createElement("div")
+                fond.classList.add("fond")
+                document.body.appendChild(fond)
+                fond.classList.add("display")
+            
+            let textFond = document.createElement("div")
+            textFond.classList.add("textFond")
+
+            let last = findAdj(e.target.textContent)
+            console.log("2",last)
+
+            switch (e.target.textContent) {
+                case "sucre" : textFond.textContent = JSON.stringify(fruits[0])
+                break
+                case "amer" : textFond.textContent = JSON.stringify(fruits[1])
+                break
+                case "acide" : textFond.textContent = JSON.stringify(fruits[2])
+                break
+                default: console.log("FAUX")
+            }
+            
+            fond.appendChild(textFond)
+        })
+    })
+})
+
+const findAdj = (content) => {
+    let lastOne = ""
+                fruits.forEach((fruit) => {
+                lastOne = fruit.adjectifs.find((adj)=> {
+                    if (lastOne && lastOne !== "undefined") {
+                        return adj === content
+                    }
+                })
+                // if (lastOne && lastOne !== "undefined") {
+                    console.log("3",lastOne)
+                    return lastOne
+                // }
+            })
+            console.log("4",lastOne)
+            return content
+            }
+
+    </script>
+
+</body>
+</html>
