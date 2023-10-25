@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<!-- 
+    ===========================
+    CSS
+    =========================== -->
 
     <style>
 
@@ -27,7 +31,7 @@
             padding: 5px;
             text-align: center;
             margin: 0 auto;
-            background: linear-gradient(52deg, #e66465, #9198e5, green 85%);
+            background: linear-gradient(110deg, yellow, black, orange 85%);
             color: white;
             cursor: pointer;
             margin-top: 5px;
@@ -81,7 +85,10 @@
 
 </head>
 
-<!-- //HTML -->
+<!-- 
+    ===========================
+    HTML
+    =========================== -->
 
 <body>
     <!-- <div class="fond"></div> -->
@@ -91,7 +98,10 @@
     </form>
 
 
-     <!-- JAVASCRIPT -->
+<!-- 
+    ===========================
+    JAVASCRIPT
+    =========================== -->
 
     <script>
 
@@ -110,6 +120,10 @@
         }
     
 
+    //     <!-- 
+    // ===========================
+    // OBJETS DANS TABLEAU
+    // =========================== -->
 
 let fruits = [
     {
@@ -140,6 +154,159 @@ let fruits = [
         }
     }
 ]
+// ====================================================
+// fruits[0].race = "mûre"
+//     fruits[0].ajout = "c'est ajouté!"
+//     console.log(fruits[0])
+//     delete fruits[0].ajout
+//     console.log(fruits[0])
+//     delete fruits[0].race
+//     console.log(fruits[0])
+// ====================================================
+
+// <!-- 
+//     ===========================
+//     OBJETS DANS OBJET
+//     =========================== -->
+
+let spaceship = {
+  passengers: null,
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032 
+  },
+  crew: {
+    captain: { 
+        name: 'Lily', 
+        degree: 'Computer Engineering', 
+        cheerTeam() { console.log('You got this!') } 
+        },
+    'chief officer': { 
+        name: 'Dan', 
+        degree: 'Aerospace Engineering', 
+        agree() { console.log('I agree, captain!') } 
+        },
+    medic: { 
+        name: 'Clementine', 
+        degree: 'Physics', 
+        announce() { console.log(`Jets on!`) } },
+    translator: {
+        name: 'Shauna', 
+        degree: 'Conservation Science', 
+        powerFuel() { console.log('The tank is full!') } 
+        }
+    },
+  engine: {
+    model: "Nimbus2000"
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD"
+    },
+    'back-up': {
+      battery: "Lithium",
+      terabytes: 50
+    }
+  },
+  nameOfMembers() {
+    console.log("5",this.crew) //le this remplace spaceship.crew
+  },
+//   nameOfMembers: () => {
+//     console.log("5",this.crew) //la fonction fléchée renvoie undefined !! NE PAS UTILISER ARROW FUNCTIONS AVEC THIS !!
+//   }
+}
+
+// spaceship.nameOfMembers()
+
+// ====================================================z
+// console.log("1",Object.keys(spaceship.crew))
+// console.log("2",Object.values(spaceship.crew))
+// console.log("3",Object.entries(spaceship.crew))
+
+// const members = spaceship.crew
+// for (let member in members) {
+//     console.log(member)
+// }
+
+
+// let changeColor = (obj) => {
+//     obj.telescope.color = "red"
+// }
+
+
+
+
+// <!-- 
+//     ===========================
+//     TEST DU GET ET SET DANS OBJET
+//     =========================== -->
+
+const user = {
+    lastName : "Noblot",
+    firstName : "Eric",
+    age: 26,
+    count: 0,
+    get fullName() {
+        if (this.lastName && this.firstName) {
+            console.log(`${this.firstName} ${this.lastName}`)
+            this.count += 1 
+            console.log(this.count)
+        } else {
+            console.log("Nom ou prénom manquant")
+        }
+    },
+    set fullName(newName) {
+        const [first, last] = newName.split(" ") //grace à la destructuration, on recupère direct dans 2 variables le résultat de FullName séparé par l'espace entre le prénom et le nom
+        this.firstName = first
+        this.lastName = last
+    }
+}
+
+// user.fullName 
+// user.lastName = "Ducroz"
+// user.fullName 
+// user.firstName = ""
+// user.fullName 
+// user.fullName = "Franck Gastambide"
+// user.fullName
+
+
+const obj1 = {
+    a: 4,
+    b: 5
+}
+
+const obj2 = {
+    a: 3,
+    b: 5,
+    c: 7,
+    d: 1
+}
+
+// console.log(obj1)
+// console.log(obj2)
+// const obj3 = Object.assign(obj1, obj2)
+// console.log(obj3)
+// const obj4 = {...obj1, ...obj2}
+// console.log(obj4)
+
+
+
+
+  const sentence = "How can mirrors be real if our eyes aren't real"
+  const sentenceUp = sentence.split(" ")
+  const testd = sentenceUp.map((s) => {
+   return s.charAt(0).toUpperCase() + s.slice(1)
+    })
+    console.log(testd)
+
+
+// <!-- 
+//     ===========================
+//     JAVASCRIPT QUI GÈRE LE HTML
+//     =========================== -->
 
 let totalAdj =[]
 fruits.map((adj) => {
